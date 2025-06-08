@@ -1,0 +1,11 @@
+torch
+transformers
+fastapi
+uvicorn
+midiutil
+librosa
+soundfile
+pyphen
+pytest
+pretty_midi
+httpx

@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  title: Lyrics-to-Music API
+  version: "1.0"
+paths:
+  /generate:
+    post:
+      summary: Generate music from lyrics and style
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                lyrics:
+                  type: string
+                style:
+                  $ref: '#/components/schemas/Style'
+      responses:
+        '200':
+          description: Generation result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  download_url:
+                    type: string
+                  metadata:
+                    type: object
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: Alive
+components:
+  schemas:
+    Style:
+      type: object
+      properties:
+        genre_id:
+          type: integer
+        tempo_range:
+          type: array
+          items:
+            type: integer
+        mood_tags:
+          type: array
+          items:
+            type: string
+        instrumentation_list:
+          type: array
+          items:
+            type: string

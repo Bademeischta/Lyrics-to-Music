@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lyrics-to-music
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lyrics-to-music
+  template:
+    metadata:
+      labels:
+        app: lyrics-to-music
+    spec:
+      containers:
+      - name: api
+        image: lyrics-to-music:latest
+        ports:
+        - containerPort: 8080
