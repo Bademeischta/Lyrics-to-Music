@@ -1,0 +1,3 @@
+eval:
+  metrics: [PAS, SSI, HC, hMOS]
+  batch_size: 4
