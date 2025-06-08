@@ -1,0 +1,11 @@
+service: lyrics-to-music
+provider:
+  name: aws
+  runtime: python3.10
+functions:
+  generate:
+    handler: src.api.lambda_handler.generate
+    events:
+      - http:
+          path: generate
+          method: post

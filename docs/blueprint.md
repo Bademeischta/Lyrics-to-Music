@@ -170,3 +170,17 @@ jobs:
       - name: Test
         run: pytest -v || true
 ```
+77bfwr-codex/erstelle-ein-architektur-dokument-für-lyrics-to-music-ki
+
+## API Specification
+The REST API is defined in `docs/api/openapi.yaml` using OpenAPI 3.0. The main endpoint `/generate` accepts lyrics and style information and returns a download link for the generated music.
+
+## Deployment Artifacts
+- `Dockerfile` – build container image
+- `k8s/deployment.yaml`, `k8s/service.yaml` – Kubernetes manifests
+- `serverless/aws_lambda.yaml` – example serverless configuration
+
+## Monitoring Templates
+Example Prometheus and Grafana configurations live in the `monitoring/` directory. These track request latency and server health.
+
+main
