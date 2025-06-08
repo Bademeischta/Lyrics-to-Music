@@ -1,5 +1,6 @@
 # Lyrics-to-Music
 
+ 77bfwr-codex/erstelle-ein-architektur-dokument-für-lyrics-to-music-ki
 This project provides a blueprint for an AI system that turns song lyrics and style parameters into complete music tracks.
 
 ## Quickstart
@@ -49,3 +50,14 @@ kubectl apply -f k8s/service.yaml
 ```
 
 For serverless environments see `serverless/aws_lambda.yaml`.
+
+This repository contains a blueprint for building a Lyrics-to-Music AI system. It provides architecture notes, configuration examples, and pseudo-code modules.
+
+## Contents
+- `docs/` – high-level design documents.
+- `src/` – pseudo-code modules.
+- `config/` – example configuration files.
+- `.github/workflows/` – CI definitions.
+
+For details read `docs/blueprint.md`.
+main

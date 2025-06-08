@@ -170,6 +170,7 @@ jobs:
       - name: Test
         run: pytest -v || true
 ```
+77bfwr-codex/erstelle-ein-architektur-dokument-für-lyrics-to-music-ki
 
 ## API Specification
 The REST API is defined in `docs/api/openapi.yaml` using OpenAPI 3.0. The main endpoint `/generate` accepts lyrics and style information and returns a download link for the generated music.
@@ -181,3 +182,5 @@ The REST API is defined in `docs/api/openapi.yaml` using OpenAPI 3.0. The main e
 
 ## Monitoring Templates
 Example Prometheus and Grafana configurations live in the `monitoring/` directory. These track request latency and server health.
+
+main
